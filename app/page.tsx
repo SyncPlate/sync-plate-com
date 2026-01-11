@@ -6,7 +6,7 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center gap-5 py-20 px-16 bg-[#8CE299]">
         <div style={{width:100, height:100}}>
           <Image
-            className="dark:invert"
+            className=""
             src="/icon-transparent.png"
             alt="Next.js logo"
             width={200}
