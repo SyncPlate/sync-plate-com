@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.keeganbruer.syncplate",
+    "sha256_cert_fingerprints": [
+        "A8:C8:59:64:19:0B:04:71:DD:76:D0:7C:C6:54:14:EE:B8:4A:87:8E:F2:68:07:EC:93:29:DE:C9:06:CA:BB:51"
+    ]
+  }
+}]
