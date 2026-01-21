@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useWindowSize } from "../hooks/useWindowSize"
+import { IoMenu } from "react-icons/io5";
 
 export function HeaderBar() {
   
@@ -23,8 +24,7 @@ export function HeaderBar() {
         gap: 10, fontSize: 20, color: "black",
         height:90
       }}>
-        Menu
-        
+        <IoMenu size={40} color="black"/>
       </div>
     )
   }

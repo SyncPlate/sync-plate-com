@@ -2,12 +2,12 @@ import { useWindowSize } from "@/src/hooks/useWindowSize";
 import Image from "next/image";
 import Link from "next/link";
 import { HeaderBar } from "@/src/components/Headerbar"
+import { MailingListSplash } from "@/src/components/MailingListSplash";
 
 export default function Home() {
-  
   return (
     <div>
-      <div className="h-[600px] md:h-[800px] rounded-[20px] md:rounded-[40px]" style={{overflow:"hidden", position:"relative", margin:10}}>
+      <div className="h-[600px] sm:h-[800px] rounded-[20px] md:rounded-[40px]" style={{overflow:"hidden", position:"relative", margin:10}}>
         <div style={{
           background: "linear-gradient(-103deg,transparent 40%, rgba(140, 226, 153, 1) 100%)",
           position: "absolute", top: 0, left: 0, width: "50%", bottom:0
@@ -49,18 +49,8 @@ export default function Home() {
             SyncPlate helps you gather and share recipes, plan daily and holiday dinners, and keeps everyone on the same plate 😊
           </p>
           <div style={{height:20}}></div>
-          <div style={{width:"90%", maxWidth:700, backgroundColor:"#10654E", padding:20, paddingTop:10, gap:10, borderRadius:10, display:"flex", flexDirection:"column", alignItems:"center"}}>
-              <span className="text-sm md:text-2xl"  style={{color:"white", fontWeight:"bold"}}>Get Notified On Release</span>
-              <div style={{display:"flex", width:"100%", gap: 10}}>
-                <input className="text-xs md:text-xl" style={{ width: "90%", backgroundColor: "white", padding: 3, paddingLeft: 10, borderRadius: 5 }} placeholder="Enter your email to join our mailing list"></input>
-                <button className="text-xs md:text-xl" style={{
-                  backgroundColor:"grey",borderRadius: 5,
-                  display: "flex", justifyContent: "center", alignItems: "center", padding: 3, paddingLeft: 10, paddingRight: 10,
-                }}>
-                  Join
-                </button>
-              </div>
-          </div>
+              <MailingListSplash />
+          
         </div>
         <Image
           src="/app-tri-demo.png"
