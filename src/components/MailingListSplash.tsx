@@ -5,14 +5,25 @@ import { useCallback, useState } from "react"
 export function MailingListSplash() {
     const [email, setEmail] = useState("")
     const [sending, setSending] = useState(false)
-    const [showMsg, setShow] = useState(false)
+    const [msg, setMsg] = useState<string | undefined>(undefined)
     const joinList = useCallback(async () => {
         console.log("joining mailing list", email)
         setSending(true)
-        const res = await fetch(`https://api.sync-plate.com/v1.0.0/api/mailinglist`, {method:"POST", body:JSON.stringify({email})})
-        if (res.status == 200) {
-            setShow(true)
-            setEmail("")
+        try {
+
+            const res = await fetch(`https://api.sync-plate.com/v1.0.0/api/mailinglist`, {
+                method: "POST", body: JSON.stringify({ email }),
+                headers: {"Content-Type":"application/json"}
+            })
+            if (res.status == 200) {
+                setMsg("Email added to waitlist!")
+                setEmail("")
+            } else {
+                throw "bad req"
+            }
+        } catch (e) {
+            setMsg("Wasn't able to add email to mailing list")
+            
         }
         setSending(false)
     }, [email])
@@ -38,7 +49,7 @@ export function MailingListSplash() {
                     Join
                 </button>
             </div>
-            <p style={{ width: "100%", fontSize: 12, opacity: showMsg ? 1 : 0 }}>Thank you for joining!</p>
+            <p style={{ width: "100%", fontSize: 12, opacity: msg !== undefined ? 1 : 0 }}>{msg}</p>
         </div>
     )
 }
