@@ -1,6 +1,4 @@
-import { useWindowSize } from "@/src/hooks/useWindowSize";
 import Image from "next/image";
-import Link from "next/link";
 import { HeaderBar } from "@/src/components/Headerbar"
 import { MailingListSplash } from "@/src/components/MailingListSplash";
 
