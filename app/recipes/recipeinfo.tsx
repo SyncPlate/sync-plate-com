@@ -1,13 +1,13 @@
 "use client"
 
-import { useRouter } from "next/router";
+import { useSearchParams } from "next/navigation";
 
 export function RecipeInfo() {
-    const router = useRouter();
-    const { id } = router.query;
+    const searchParams = useSearchParams();
+    const id = searchParams.get('id');
     return (
         <div style={{color:"black"}}>
-        recipe ID { id}
+        recipe ID {id}
         </div>
     );
 }
