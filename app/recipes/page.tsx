@@ -1,11 +1,14 @@
 // import Image from "next/image";
 // import Link from "next/link";
 
-export default function Home() {
+import { useRouter } from "next/router";
 
+export default function Home() {
+  const router = useRouter();
+  const { id } = router.query;
   return (
-    <div>
-      hello
+    <div style={{color:"black"}}>
+      recipe ID { id}
     </div>
   );
 }
