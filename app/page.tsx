@@ -5,7 +5,11 @@ import { MailingListSplash } from "@/src/components/MailingListSplash";
 export default function Home() {
   return (
     <div>
-      <div className="h-[600px] sm:h-[800px] rounded-[20px] md:rounded-[40px]" style={{overflow:"hidden", position:"relative", margin:10}}>
+      <HeaderBar />
+      <div
+        className="h-[600px] sm:h-[800px] rounded-[20px] md:rounded-[40px]"
+        style={{ overflow: "hidden", position: "relative", margin: 10, marginTop:-80 }}
+      >
         <div style={{
           background: "linear-gradient(-103deg,transparent 40%, rgba(140, 226, 153, 1) 100%)",
           position: "absolute", top: 0, left: 0, width: "50%", bottom:0
@@ -14,24 +18,7 @@ export default function Home() {
           background: "linear-gradient(103deg,transparent 40%, rgba(140, 226, 153, 1) 100%)",
           position: "absolute", top: 0, right: 0, width: "50%", bottom:0
         }}></div>
-        <div style={{
-          position: "absolute", top: 0, left: 0,
-          display: "flex", flexDirection: "row", padding: 20, alignItems: "center", gap: 10, fontSize: 20, color: "white",
-
-        }}>
-          <Image
-              src="/web-app-manifest-512x512.png"
-              alt="Next.js logo"
-              width={50}
-              height={50}
-              priority
-              style={{minWidth:50, width:50, minHeight:50, height:50}}
-          />
-          
-          <span style={{
-            textShadow:"0px 5px 5px black", fontWeight:"bold"
-          }}>SyncPlate</span>
-        </div>
+        
         
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
@@ -60,7 +47,6 @@ export default function Home() {
           style={{position:"absolute", bottom:0, left:"50%", translate:"-50% 0"}}
         />
         
-        <HeaderBar />
       </div>
       <main style={{minHeight:500}}>
 

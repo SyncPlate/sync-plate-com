@@ -42,7 +42,8 @@ export function MailingListSplash() {
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                 ></input>
-                <button disabled={sending}  className="text-xs md:text-xl" style={{
+                <button disabled={sending} className="text-xs md:text-xl" style={{
+                    opacity: sending ? 0.2 : 1,
                     backgroundColor:"#ECFFEF",borderRadius: 5, cursor:"pointer", color:"black",
                     display: "flex", justifyContent: "center", alignItems: "center", padding: 3, paddingLeft: 10, paddingRight: 10,
                 }} onClick={joinList}>
