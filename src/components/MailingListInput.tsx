@@ -21,6 +21,7 @@ export function MailingListInput() {
             } else {
                 throw "bad req"
             }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (e) {
             setMsg("Wasn't able to add email to mailing list")
             

@@ -32,7 +32,7 @@ export function Footer() {
                             }}>SyncPlate</span>
                         </div>
                         <p className="text-sm md:text-xl">Your digital cookbook and collaborative meal planner</p>
-                        <p className="text-sm hidden md:flex">@2025 Keegan Bruer, All Rights Reserved</p>
+                        <p className="text-sm hidden md:flex">©2026 Keegan Bruer, All Rights Reserved</p>
                     </div>
                     <div style={{
                         display: "flex", flexDirection: "column", gap: 20, justifyContent:"flex-end", flex:1, maxWidth:450,
