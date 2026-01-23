@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { MailingListInput } from "./MailingListInput";
 
 export function Footer() {
+
     return (
         <div  style={{ color:"white", backgroundColor: "#303030", display:"flex", flexDirection:"column", alignItems:"center" }}>
             <div className="pb-[100px] md:pb-[200px]" style={{ width: "85%", maxWidth: 1200 }}>
@@ -36,17 +38,7 @@ export function Footer() {
                         display: "flex", flexDirection: "column", gap: 20, justifyContent:"flex-end", flex:1, maxWidth:450,
                     }}>
                         <span className="text-sm md:text-xl" style={{fontWeight:"bold"}}>Stay Updated</span>
-                        <div style={{display:"flex", flexDirection:"row", width:"100%", gap:10}}>
-                            <input
-                                className="text-xs md:text-sm"
-                                style={{ flex: 8, backgroundColor: "white", color:"black", paddingLeft:10, paddingRight:10, height: 30, borderRadius: 5 }}
-                                placeholder="Enter your email address"
-                            />
-                            <button className="text-xs md:text-sm" style={{
-                                 paddingLeft:10, paddingRight:10,
-                                flex: 1, backgroundColor: "#10654E", borderRadius: 5, cursor: "pointer"
-                            }}>Subscribe</button>
-                        </div>
+                        <MailingListInput />
                         <div className="hidden md:flex" style={{height:14}}></div>
                     </div>
                 </div>

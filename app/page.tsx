@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HeaderBar } from "@/src/components/Headerbar"
-import { MailingListSplash } from "@/src/components/MailingListSplash";
+import { MailingListInput } from "@/src/components/MailingListInput";
 
 export default function Home() {
   return (
@@ -34,8 +34,12 @@ export default function Home() {
             SyncPlate helps you gather and share recipes, plan daily and holiday dinners, and keeps everyone on the same plate 😊
           </p>
           <div style={{height:20}}></div>
-              <MailingListSplash />
-          
+            <div style={{
+              width: "90%", maxWidth: 700, backgroundColor: "#10654E", color:"white", padding: 20, paddingTop: 10, paddingBottom: 10, gap: 10, borderRadius: 10, display: "flex", flexDirection: "column", alignItems: "center"
+            }}>
+            <span className="text-sm md:text-2xl"  style={{ fontWeight:"bold"}}>Get Notified On Release</span>
+            <MailingListInput />
+        </div>
         </div>
         <Image
           src="/app-tri-demo.png"
