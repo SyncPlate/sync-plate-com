@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { HeaderBar } from "@/src/components/Headerbar"
 import { MailingListInput } from "@/src/components/MailingListInput";
 
 export default function Home() {
   return (
     <div>
-      <HeaderBar />
       <div
         className="h-[600px] sm:h-[800px] rounded-[20px] md:rounded-[40px]"
         style={{ overflow: "hidden", position: "relative", margin: 10, marginTop:-80 }}

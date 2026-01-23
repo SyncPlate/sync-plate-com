@@ -7,8 +7,10 @@ import { RecipeInfo } from "./recipeinfo";
 
 export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <RecipeInfo />
-    </Suspense>
+    <main style={{minHeight:500}}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <RecipeInfo />
+      </Suspense>
+    </main>
   );
 }

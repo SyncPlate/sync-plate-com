@@ -14,11 +14,11 @@ export function HeaderBar() {
   const MenuBar = useMemo(() => {
       const items = [
         { label: "Home", href:"/" },
-        { label: "Features", href:"/" },
+        { label: "Features", href:"/features" },
         { label: "Screenshots", href:"/screenshots" },
-        { label: "Pricing", href:"/" },
-        { label: "FAQ", href:"/" },
-        { label: "Contact", href:"/" },
+        { label: "Pricing", href:"/pricing" },
+        { label: "FAQ", href:"/FAQ" },
+        { label: "Contact", href:"/contact" },
       ]
     if (size.width < 900) {
       

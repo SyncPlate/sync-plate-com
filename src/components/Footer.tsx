@@ -59,16 +59,16 @@ export function Footer() {
                     </div>
                     <div className="text-xs md:text-base" style={{flex:1, display:"flex", flexDirection:"row", gap:20, justifyContent:"flex-end"}}>
                         <div style={{display:"flex", flexDirection:"column", minWidth:70, gap:10}}>
-                            <span style={{fontWeight:"bold"}}>Company</span>
-                            <a>About</a>
-                            <a>Blog</a>
+                            <span style={{fontWeight:"bold"}}>Developer</span>
+                            <a href="https://keeganbruer.com" target="_blank">About</a>
+                            <a href="https://keeganbruer.com/Articles" target="_blank">Blog</a>
                         </div>
                         <div style={{display:"flex", flexDirection:"column", minWidth:100, gap:10}}>
                             <span style={{fontWeight:"bold"}}>Help</span>
                             <a>Support</a>
-                            <a>Privacy Policy</a>
-                            <a>Terms of Service</a>
-                            <a>FAQ</a>
+                            <a href="/docs/privacy-policy">Privacy Policy</a>
+                            <a href="/docs/terms-of-service">Terms of Service</a>
+                            <a href="/FAQ">FAQ</a>
                         </div>
                         <div style={{display:"flex", flexDirection:"column", minWidth:133, gap:10}}>
                             <span style={{fontWeight:"bold"}}>Support</span>
