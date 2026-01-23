@@ -54,7 +54,7 @@ export function HeaderBar() {
       display: "flex", flexDirection: "row", padding: 20, alignItems: "center", justifyContent:"space-between",
       gap: 10, fontSize: 20, color: "black",
       height: 60, backgroundColor: atTop ? "transparent" : "#8ce299b4",
-      boxShadow: atTop ? "" : "black 0px 0px 10px 0px", backdropFilter:"blur(5px)"
+      boxShadow: atTop ? "" : "black 0px 0px 10px 0px", backdropFilter:atTop ? "" : "blur(5px)"
     }}>
       <div style={{
         width: 200,
