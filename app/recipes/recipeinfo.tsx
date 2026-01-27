@@ -35,9 +35,10 @@ export function RecipeInfo() {
     return (
         <div style={{color:"black", display:"flex", flexDirection:"column", alignItems:"center"}}>
             <div style={{paddingTop:50, width:"90%", maxWidth:900}}>
-                <h1>{recipe?.name || "Loading recipe..."}</h1>
+                <h1 style={{fontWeight:"bold", textAlign:"center"}}>{recipe?.name || "Loading recipe..."}</h1>
                 <p>{recipe?.summary}</p>
                 <div style={{paddingBottom:50}}>
+                    <h3 style={{fontWeight:"bold"}}>Stats</h3>
                     <p>Prep: {recipe?.prep_time}</p>
                     <p>Cook: {recipe?.cook_time}</p>
                 </div>
