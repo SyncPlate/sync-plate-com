@@ -7,6 +7,10 @@ export function MailingListInput() {
     const [sending, setSending] = useState(false)
     const [msg, setMsg] = useState<string | undefined>(undefined)
     const joinList = useCallback(async () => {
+        if (email.trim() === "") {
+            setMsg("Email is empty")
+            return;
+        }
         console.log("joining mailing list", email)
         setSending(true)
         try {
@@ -32,6 +36,8 @@ export function MailingListInput() {
         <div style={{display:"flex", flexDirection:"column", width:"100%"}}>
             <div style={{display:"flex", flexDirection:"row", width:"100%", gap:10}}>
                 <input
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
                     className="text-xs md:text-sm"
                     style={{ flex: 8, backgroundColor: "white", color:sending ? "#000000af" :"black", paddingLeft:10, paddingRight:10, height: 30, borderRadius: 5 }}
                     placeholder="Enter your email address"

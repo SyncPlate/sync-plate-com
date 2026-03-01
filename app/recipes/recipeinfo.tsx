@@ -13,7 +13,7 @@ export function RecipeInfo() {
         description: string
         directions: string
         id: string
-        ingrediants: string
+        ingredients: string
         lastUpdated: string
         name: string
         notes: string
@@ -42,8 +42,8 @@ export function RecipeInfo() {
                     <p>Prep: {recipe?.prep_time}</p>
                     <p>Cook: {recipe?.cook_time}</p>
                 </div>
-                <h3 style={{fontWeight:"bold"}}>Ingrediants</h3>
-                <p style={{paddingBottom:50}}>{recipe?.ingrediants}</p>
+                <h3 style={{fontWeight:"bold"}}>Ingredients</h3>
+                <p style={{paddingBottom:50}}>{recipe?.ingredients}</p>
                 <h3 style={{fontWeight:"bold"}}>Directions</h3>
                 <p style={{paddingBottom:50}}>{recipe?.directions}</p>
                 <h3 style={{fontWeight:"bold"}}>Notes</h3>
