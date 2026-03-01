@@ -1,14 +1,22 @@
 "use client"
 
-import { useCallback, useState } from "react"
+import { useCallback, useRef, useState } from "react"
 
 export function MailingListInput() {
     const [email, setEmail] = useState("")
     const [sending, setSending] = useState(false)
     const [msg, setMsg] = useState<string | undefined>(undefined)
+    const ref = useRef<NodeJS.Timeout>(null)
+    const toastMsg = useCallback((msgText:string) => {
+        setMsg(msgText)
+        if (ref.current) clearTimeout(ref.current)
+        ref.current = setTimeout(() => {
+            setMsg("")
+        }, 10*1000)
+    }, [])
     const joinList = useCallback(async () => {
         if (email.trim() === "") {
-            setMsg("Email is empty")
+            toastMsg("Email is empty")
             return;
         }
         console.log("joining mailing list", email)
@@ -20,14 +28,14 @@ export function MailingListInput() {
                 headers: {"Content-Type":"application/json"}
             })
             if (res.status == 200) {
-                setMsg("Email added to waitlist!")
+                toastMsg("Email added to waitlist!")
                 setEmail("")
             } else {
                 throw "bad req"
             }
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (e) {
-            setMsg("Wasn't able to add email to mailing list")
+            toastMsg("Wasn't able to add email to mailing list")
             
         }
         setSending(false)
