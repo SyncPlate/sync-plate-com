@@ -12,7 +12,7 @@ export function MailingListInput() {
         if (ref.current) clearTimeout(ref.current)
         ref.current = setTimeout(() => {
             setMsg("")
-        }, 10*1000)
+        }, 3*1000)
     }, [])
     const joinList = useCallback(async () => {
         if (email.trim() === "") {
@@ -46,6 +46,7 @@ export function MailingListInput() {
                 <input
                     value={email}
                     onChange={(e)=>setEmail(e.target.value)}
+                    onKeyDown={(e)=>{ if (e.key === "Enter") joinList() }}
                     className="text-xs md:text-sm"
                     style={{ flex: 8, backgroundColor: "white", color:sending ? "#000000af" :"black", paddingLeft:10, paddingRight:10, height: 30, borderRadius: 5 }}
                     placeholder="Enter your email address"
@@ -56,7 +57,7 @@ export function MailingListInput() {
                     flex: 1, backgroundColor: "#ECFFEF", borderRadius: 5, cursor: "pointer"
                 }} onClick={joinList}>Subscribe</button>
             </div>
-            <p style={{opacity: msg !== undefined ? 1 : 0, fontSize:13}}>{msg !== undefined ? msg : "Space holding text"}</p>
+            <p style={{opacity: msg !== undefined ? 1 : 0, fontSize:13, height:15}}>{msg !== undefined ? msg : "Space holding text"}</p>
         </div>
     )
 }
