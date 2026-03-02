@@ -4,7 +4,8 @@
     "namespace": "android_app",
     "package_name": "com.keeganbruer.syncplate",
     "sha256_cert_fingerprints": [
-        "A8:C8:59:64:19:0B:04:71:DD:76:D0:7C:C6:54:14:EE:B8:4A:87:8E:F2:68:07:EC:93:29:DE:C9:06:CA:BB:51"
+        "A8:C8:59:64:19:0B:04:71:DD:76:D0:7C:C6:54:14:EE:B8:4A:87:8E:F2:68:07:EC:93:29:DE:C9:06:CA:BB:51",
+        "81:85:9E:C6:FC:8C:20:F7:3B:5E:3C:C2:D0:0D:92:A1:BE:90:64:CF:31:35:F9:A3:30:CC:49:FA:37:3E:E8:1E"
     ]
   }
 }]
